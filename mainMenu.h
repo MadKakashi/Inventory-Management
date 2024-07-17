@@ -1,0 +1,2 @@
+void startingMessage();
+void mainMenu();

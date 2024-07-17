@@ -1,0 +1,2 @@
+void outputToFile();
+void inputFromFile();
