@@ -1,19 +1,12 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(Inventory-Management VERSION 1.0)
+project(InventoryManagement VERSION 1.0)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-add_executable(InventoryManagement
-    main.cpp
-    bufferClear.cpp
-    io.cpp
-    mainMenu.cpp
-    product.cpp
-    removeProduct.cpp
-    product.cpp
-    searchProduct.cpp
-    showInventory.cpp
-    updateProduct.cpp
-)
+include_directories(${PROJECT_SOURCE_DIR}/include)
+
+file(GLOB SOURCES "src/*.cpp")
+
+add_executable(${PROJECT_NAME} main.cpp ${SOURCES})
